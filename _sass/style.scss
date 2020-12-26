@@ -1,0 +1,13 @@
+// colors
+$body-bg-color: white;
+$header-title-color: blue;
+$header-nav-color: blue;
+$footer-color: lightgray;
+
+.header {
+  padding: 50px 0;
+}
+
+.navbar-light .navbar-brand{
+	color: $header-title-color;
+}
