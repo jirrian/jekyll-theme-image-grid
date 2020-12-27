@@ -1,5 +1,30 @@
 ---
 layout: default
 ---
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-">
 
-{{ content }}
+	    {% assign post_filename = page.path | split: "." | first | remove_first: "_posts/" %}
+	    {% capture post_images_folder %}/assets/images/post_images/{{ post_filename }}{% endcapture %}
+	    {% assign post_images_array = "" | split: ',' %}
+
+	    {% for image in site.static_files %}
+	    	{% if image.path contains post_images_folder %}
+	    		{% assign post_images_array = post_images_array | push: image %}
+			{% endif %}
+		{% endfor %}
+				
+		{% for post_image in post_images_array %}
+			<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+		{% endfor %}
+
+	</div>
+	<div class="col-lg-6 col-md-6 col-">
+		{% if site.post_settings.show_title and page.show_title != false %}
+			<h3>{{ page.title }}</h3>
+		{% elsif site.post_settings.show_title == false and page.show_title %}
+			<h3>{{ page.title }}</h3>
+		{% endif %}
+		{{ content }}
+	</div>
+</div>

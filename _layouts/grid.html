@@ -2,4 +2,29 @@
 layout: default
 ---
 
-{{ content }}
+<div class='row'>
+    {% for post in site.posts %}
+    	{% assign post_filename = post.path | split: "." | first | remove_first: "_posts/" %}
+    	{% capture post_images_folder %}/assets/images/post_images/{{ post_filename }}{% endcapture %}
+    	{% assign post_images_array = "" | split: ',' %}
+
+    	{% for image in site.static_files %}
+    		{% if image.path contains post_images_folder %}
+    			{% assign post_images_array = post_images_array | push: image %}
+			{% endif %}
+		{% endfor %}
+			
+		{% if site.grid_settings.show_all_images == true %}
+			{% for post_image in post_images_array %}
+				<div class="col-lg-4 col-md-4 col-">
+					<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+				</div>
+			{% endfor %}
+    	{% else %}
+    		{% assign post_image = post_images_array.first %}
+    		<div class="col-lg-4 col-md-4 col-">
+				<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+			</div>
+    	{% endif %}
+    {% endfor %}
+</div>

@@ -23,5 +23,23 @@ social_links:
   # - username: jekyll2
   #   instance: example.com
 
+# settings for image grid homepage
+grid_settings:
+  show_all_images: true #true - displays all images in grid page, false - only show first (file name of image sorted alphabetically) image of post in grid page
+
+# settings for post pages
+post_settings:
+  show_title: true #true - shows title of post (post filename or title in front matter of post file), false - does not show title of post. this settings can be overwritten in the frontmatter of individual post files with the show_title variable.
+
 plugins:
   - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: "assets/images/post_images"
+    values:
+      post_image: true
+  - scope:
+      path: "assets/images/post_thumbnails"
+    values:
+      post_thumbnail: true

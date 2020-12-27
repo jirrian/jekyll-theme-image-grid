@@ -1,45 +1,17 @@
 <footer class='footer'>
   <hr />
-  <ul class='footer__list'>
-    {% if site.email %}
-        <li class='footer__item'>
-          <a href='mailto:{{ site.email }}'>{{ site.email }}</a>
-        </li>
-    {% endif %}
 
-    {% if site.github_username %}
-      <li class='footer__item'>
-        <a href='https://github.com/{{ site.github_username }}' title='github'>
-          github
-        </a>
-      </li>
-    {% endif %}
+{%- assign social = site.social_links -%}
 
-    {% if site.twitter_username %}
-      <li class='footer__item'>
-        <a href='https://twitter.com/{{ site.twitter_username }}' title='twitter'>
-          twitter
-        </a>
-      </li>
-    {% endif %}
-
-    {% if site.instagram_username %}
-      <li class='footer__item'>
-        <a href='https://www.instagram.com/{{ site.instagram_username }}' title='instagram'>
-          instagram
-        </a>
-      </li>
-    {% endif %}
-
-    {% if site.facebook_username %}
-      <li class='footer__item'>
-        <a href='https://www.facebook.com/{{ site.facebook_username }}' title='facebook'>
-          {% include icon.html icon='facebook' %}
-        </a>
-      </li>
-    {% endif %}
-
-
-
-  </ul>
+<ul class="social-media-list">
+  {%- if social.facebook -%}<li><a rel="me" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.github -%}<li><a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.instagram -%}<li><a rel="me" href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" title="{{ social.instagram | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.linkedin -%}<li><a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.pinterest -%}<li><a rel="me" href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}" title="{{ social.pinterest | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pinterest' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- for mst in social.mastodon -%}{%- if mst.username and mst.instance -%}<li><a rel="me" href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}" title="{{ mst.username | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use></svg></a></li>{%- endif -%}{%- endfor -%}
+  {%- if social.twitter -%}<li><a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.youtube -%}<li><a rel="me" href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use></svg></a></li>{%- endif -%}
+  {%- if social.youtube_channel -%}<li><a rel="me" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use></svg></a></li>{%- endif -%}
+</ul>
 </footer>
