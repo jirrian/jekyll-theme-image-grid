@@ -33,13 +33,3 @@ post_settings:
 
 plugins:
   - jekyll-seo-tag
-
-defaults:
-  - scope:
-      path: "assets/images/post_images"
-    values:
-      post_image: true
-  - scope:
-      path: "assets/images/post_thumbnails"
-    values:
-      post_thumbnail: true
