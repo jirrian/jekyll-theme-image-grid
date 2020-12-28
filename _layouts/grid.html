@@ -9,7 +9,8 @@ layout: default
     	{% assign post_images_array = "" | split: ',' %}
 
     	{% for image in site.static_files %}
-    		{% if image.path contains post_images_folder %}
+    		{% assign image_folder = image.path | split: "/" | pop | join: "/" %}
+    		{% if image_folder == post_images_folder %}
     			{% assign post_images_array = post_images_array | push: image %}
 			{% endif %}
 		{% endfor %}

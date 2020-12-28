@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="row">
+<div class="row justify-content-center">
 	<div class="col-lg-6 col-md-6 col-">
 
 	    {% assign post_filename = page.path | split: "." | first | remove_first: "_posts/" %}
@@ -9,7 +9,8 @@ layout: default
 	    {% assign post_images_array = "" | split: ',' %}
 
 	    {% for image in site.static_files %}
-	    	{% if image.path contains post_images_folder %}
+	    	{% assign image_folder = image.path | split: "/" | pop | join: "/" %}
+    		{% if image_folder == post_images_folder %}
 	    		{% assign post_images_array = post_images_array | push: image %}
 			{% endif %}
 		{% endfor %}
@@ -19,6 +20,8 @@ layout: default
 		{% endfor %}
 
 	</div>
+	{% assign content = page.content | strip_newlines %}
+	{% if content != "" %}
 	<div class="col-lg-6 col-md-6 col-">
 		{% if site.post_settings.show_title and page.show_title != false %}
 			<h3>{{ page.title }}</h3>
@@ -27,4 +30,5 @@ layout: default
 		{% endif %}
 		{{ content }}
 	</div>
+	{% endif %}
 </div>

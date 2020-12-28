@@ -5,9 +5,24 @@ $header-nav-color: blue;
 $footer-color: lightgray;
 
 .header {
-  padding: 50px 0;
+  padding: 0px 0;	// edit to move nav bar up or down
 }
 
 .navbar-light .navbar-brand{
-	color: $header-title-color;
+	color: $header-title-color; // edit to change site title color
+}
+
+.navbar {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.social-media-list li{
+	display: inline;
+	margin-right: 1em;
+}
+
+.svg-icon{
+	fill: $footer-color;	// edit to change color of svg icons in footer
+	width: 1em;
 }
