@@ -26,3 +26,45 @@ $footer-color: lightgray;
 	fill: $footer-color;	// edit to change color of svg icons in footer
 	width: 1em;
 }
+
+.grid img {
+	width: 100%;
+}
+
+.image-container{
+	display: inline-block;
+	padding: 0.5em;
+}
+
+@media (min-width: 576px){
+	.image-container {
+	  	height: 183px;
+	  	width: 183px;
+	  	overflow: hidden;
+	}
+
+}
+
+@media (min-width: 768px){
+	.image-container {
+	  	height: 240px;
+	  	width: 240px;
+	  	overflow: hidden;
+	}
+}
+
+@media (min-width: 992px){
+	.image-container {
+	  	height: 322px;
+	  	width: 322px;
+	  	overflow: hidden;
+	}
+}
+
+@media (min-width: 1200px){
+	.image-container {
+	  	height: 380px;
+	  	width: 380px;
+	  	overflow: hidden;
+	}
+}

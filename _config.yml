@@ -26,6 +26,7 @@ social_links:
 # settings for image grid homepage
 grid_settings:
   show_all_images: true #true - displays all images in grid page, false - only show first (file name of image sorted alphabetically) image of post in grid page
+  display: square #square - images displayed in square aspect ratio grid, masonry - images displayed in original aspect ratio but staggered (please note this will display the images in top to bottom order instead of left to right)
 
 # settings for post pages
 post_settings:
