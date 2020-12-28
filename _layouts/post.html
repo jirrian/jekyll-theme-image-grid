@@ -21,6 +21,7 @@ layout: default
 
 	</div>
 	{% assign content = page.content | strip_newlines %}
+	<!-- if there is post content -->
 	{% if content != "" %}
 	<div class="col-lg-6 col-md-6 col-">
 		{% if site.post_settings.show_title and page.show_title != false %}
@@ -32,3 +33,15 @@ layout: default
 	</div>
 	{% endif %}
 </div>
+<!-- if there is no post content but a post title -->
+{% if content == "" %}
+<div class="row justify-content-center">
+	<div class="col-lg-6 col-md-6 col-">
+		{% if site.post_settings.show_title and page.show_title != false %}
+			<h3>{{ page.title }}</h3>
+		{% elsif site.post_settings.show_title == false and page.show_title %}
+			<h3>{{ page.title }}</h3>
+		{% endif %}
+	</div>
+</div>
+{% endif %}
