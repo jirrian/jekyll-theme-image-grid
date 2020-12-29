@@ -23,16 +23,16 @@ layout: default
 			{% for post_image in post_images_array %}
 				{% if site.grid_settings.display == "masonry" %}
 					<div class="card grid-masonry">
-						<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+						<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path | relative_url }}" class="img-fluid" alt="{{ post.title }}"></a>
 					</div>
 				{% elsif site.grid_settings.display == "square-cropped" or site.grid_settings.display == "square-og" %}
 					<div class='col-sm-4 col- p-0'>
 						<div class="image-container">
 							<a href="{{ post.url | relative_url }}">
 								{% if site.grid_settings.display == "square-cropped" %}
-									<img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}">
+									<img src="{{ post_image.path | relative_url }}" class="img-fluid" alt="{{ post.title }}">
 								{% elsif site.grid_settings.display == "square-og" %}
-									<img src="{{ post_image.path }}" class="img-fluid grid-square-og" alt="{{ post.title }}">
+									<img src="{{ post_image.path | relative_url }}" class="img-fluid grid-square-og" alt="{{ post.title }}">
 								{% endif %}
 							</a>
 						</div>
