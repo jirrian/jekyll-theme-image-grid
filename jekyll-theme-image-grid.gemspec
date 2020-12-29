@@ -3,14 +3,16 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-image-grid"
   spec.version       = "0.1.0"
-  spec.authors       = ["Jillian"]
+  spec.authors       = ["jirrian"]
   spec.email         = ["jillianzhong@yahoo.com"]
 
   spec.summary       = "Simple template for an image grid website."
-  spec.homepage      = "https://github.com/jirrian"
+  spec.homepage      = "https://github.com/jirrian/jekyll-theme-image-grid"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.1"
+
+  spec.add_development_dependency "jekyll-seo-tag"
 end
