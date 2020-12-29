@@ -5,7 +5,7 @@ layout: default
 <div class="grid">
 	{% if site.grid_settings.display == "masonry" %}
 		<div class='card-columns'>
-	{% elsif site.grid_settings.display == "square" %}
+	{% elsif site.grid_settings.display == "square-cropped" or site.grid_settings.display == "square-og" %}
 		<div class='row'>
 	{% endif %}
 	    {% for post in site.posts %}
@@ -20,26 +20,29 @@ layout: default
 				{% endif %}
 			{% endfor %}
 				
-			{% if site.grid_settings.show_all_images == true %}
-				{% for post_image in post_images_array %}
-					{% if site.grid_settings.display == "masonry" %}
-						<div class="card">
-							<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+			{% for post_image in post_images_array %}
+				{% if site.grid_settings.display == "masonry" %}
+					<div class="card grid-masonry">
+						<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+					</div>
+				{% elsif site.grid_settings.display == "square-cropped" or site.grid_settings.display == "square-og" %}
+					<div class='col-sm-4 col- p-0'>
+						<div class="image-container">
+							<a href="{{ post.url | relative_url }}">
+								{% if site.grid_settings.display == "square-cropped" %}
+									<img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}">
+								{% elsif site.grid_settings.display == "square-og" %}
+									<img src="{{ post_image.path }}" class="img-fluid grid-square-og" alt="{{ post.title }}">
+								{% endif %}
+							</a>
 						</div>
-					{% elsif site.grid_settings.display == "square" %}
-						<div class='col-sm-4 col- p-0'>
-							<div class="image-container">
-								<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
-							</div>
-						</div>
-					{% endif %}
-				{% endfor %}
-	    	{% else %}
-	    		{% assign post_image = post_images_array.first %}
-	    		<div class="col-md-4 col-">
-					<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
-				</div>
-	    	{% endif %}
+					</div>
+				{% endif %}
+				{% if site.grid_settings.show_all_images == false %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+
 	    {% endfor %}
 	</div>
 </div>
