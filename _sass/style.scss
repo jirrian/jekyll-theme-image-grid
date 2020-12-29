@@ -3,11 +3,16 @@ $body-bg-color: white;	// background color
 $header-title-color: blue;	// color of title of website
 $header-bg-color: white;	// color of nav bar
 $footer-color: silver;	// color of footer icons
-$post-title-color: gray;	// color of post and page titles
+$post-title-color: gray;	// color of post titles
 $post-date-color: darkgray;	// color of post dates
+$page-title-color: gray; // color of page titles
 
-.header {
-  padding: 0px 0;	// edit to move nav bar up or down
+body{
+	background-color: white;	
+}
+
+.header .container {
+  	padding-top: 1em; // edit to move nav bar up or down
 }
 
 .navbar-light .navbar-brand{
@@ -15,8 +20,11 @@ $post-date-color: darkgray;	// color of post dates
 }
 
 .navbar {
-	padding-right: 0px;
-	padding-left: 0px;
+	background-color: white;
+}
+
+.footer{
+	margin-top: 4em;
 }
 
 .social-media-list li{
@@ -97,4 +105,10 @@ $post-date-color: darkgray;	// color of post dates
 
 .post-text-container{
 	margin-top: 0.5em;	// edit to move post title/date/content up or down
+}
+
+.page-title{
+	font-size: 2em;
+	color: $page-title-color;
+	margin-bottom: 0.5em;
 }
