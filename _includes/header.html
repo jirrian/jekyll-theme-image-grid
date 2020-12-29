@@ -1,7 +1,7 @@
 <header class='header'>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-light">
 			<div class="container"><!-- remove this container class for a full width nav bar -->
-				<a class="navbar-brand" href="{{ / | relative_url }}">{{ site.title | escape }}</a>
+				<a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 				{% if site.pages.size > 0 %}
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
