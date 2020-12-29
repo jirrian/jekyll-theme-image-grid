@@ -17,7 +17,7 @@ layout: default
 		{% endfor %}
 				
 		{% for post_image in post_images_array %}
-			<a href="{{ post.url | relative_url }}"><img src="{{ post_image.path }}" class="img-fluid" alt="{{ post.title }}"></a>
+			<img src="{{ post_image.path | relative_url }}" class="img-fluid" alt="{{ post.title }}">
 		{% endfor %}
 
 	</div>
