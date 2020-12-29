@@ -1,15 +1,17 @@
-// colors
-$body-bg-color: white;
-$header-title-color: blue;
-$header-nav-color: blue;
-$footer-color: lightgray;
+// colors (edit these to change the colors of parts of the site's design)
+$body-bg-color: white;	// background color
+$header-title-color: blue;	// color of title of website
+$header-bg-color: white;	// color of nav bar
+$footer-color: silver;	// color of footer icons
+$post-title-color: gray;	// color of post and page titles
+$post-date-color: darkgray;	// color of post dates
 
 .header {
   padding: 0px 0;	// edit to move nav bar up or down
 }
 
 .navbar-light .navbar-brand{
-	color: $header-title-color; // edit to change site title color
+	color: $header-title-color;
 }
 
 .navbar {
@@ -23,12 +25,8 @@ $footer-color: lightgray;
 }
 
 .svg-icon{
-	fill: $footer-color;	// edit to change color of svg icons in footer
+	fill: $footer-color;
 	width: 1em;
-}
-
-.grid img {
-	width: 100%;
 }
 
 .grid-square-og {
@@ -52,7 +50,6 @@ $footer-color: lightgray;
 	  	width: 183px;
 	  	overflow: hidden;
 	}
-
 }
 
 @media (min-width: 768px){
@@ -77,4 +74,27 @@ $footer-color: lightgray;
 	  	width: 380px;
 	  	overflow: hidden;
 	}
+}
+
+.post-title{
+	font-size: 1.5em;
+	color: $post-title-color;
+}
+
+.post-date{
+	font-size: 0.9em;
+	color: $post-date-color;
+}
+
+.post-content{
+	margin-top: 1em;
+}
+
+.post img{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.post-text-container{
+	margin-top: 0.5em;	// edit to move post title/date/content up or down
 }
