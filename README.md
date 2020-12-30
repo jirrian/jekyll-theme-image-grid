@@ -1,6 +1,6 @@
 # jekyll-theme-image-grid
 
-A simple responsive image grid theme for displaying image-based content with various built-in customization options. See a ![live example](https://www.jzhong.today/jekyll-theme-image-grid/).
+A simple responsive image grid theme for displaying image-based content with various built-in customization options. See a [live example](https://www.jzhong.today/jekyll-theme-image-grid/).
 
 ![Example Screenshot](screenshot.png)
 

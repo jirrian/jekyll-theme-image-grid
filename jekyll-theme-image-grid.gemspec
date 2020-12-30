@@ -14,5 +14,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.1"
 
-  spec.add_development_dependency "jekyll-seo-tag"
+  spec.add_development_dependency "jekyll-seo-tag", "~> 2.7"
 end
