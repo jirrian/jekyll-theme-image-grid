@@ -6,7 +6,7 @@ layout: default
 	<div class="col-lg-6 col-md-6 col-">
 
 	    {% assign post_filename = page.path | split: "." | first | remove_first: "_posts/" %}
-	    {% capture post_images_folder %}/assets/images/post_images/{{ post_filename }}{% endcapture %}
+	    {% capture post_images_folder %}/_images/post_images/{{ post_filename }}{% endcapture %}
 	    {% assign post_images_array = "" | split: ',' %}
 
 	    {% for image in site.static_files %}

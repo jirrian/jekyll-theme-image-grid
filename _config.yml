@@ -35,3 +35,6 @@ post_settings:
 
 plugins:
   - jekyll-seo-tag
+
+include:
+  - _images
