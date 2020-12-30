@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["jirrian"]
   spec.email         = ["jillianzhong@yahoo.com"]
 
-  spec.summary       = "Simple template for an image grid website."
+  spec.summary       = "A simple responsive image grid theme for displaying image-based content with various built-in customization options."
   spec.homepage      = "https://github.com/jirrian/jekyll-theme-image-grid"
   spec.license       = "MIT"
 
