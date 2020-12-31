@@ -7,7 +7,6 @@ description: A simple image grid theme. Add your site description here in the _c
 # generate social links in footer
 social_links:
   twitter: jirrian
-  github: jekyll
   # facebook: jekyll
   # instagram: jekyll
   # linkedin: jekyll
