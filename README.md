@@ -20,14 +20,14 @@ And then execute:
 To use this theme with Github Pages, add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-remote_theme: jirrian/jekyll-theme-image-grid
+remote_theme: jirrian/jekyll-theme-image-grid@main
 ```
 
 Then build your site:
 
     $ bundle exec jekyll serve
 
-Preview your new site at `http://localhost:4000`.
+Preview your new site at `http://localhost:4000`. Now you should be able to test your site locally as well as deploy it on Github Pages.
 
 ## Adding a New Post
 
