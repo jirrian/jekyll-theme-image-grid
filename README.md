@@ -1,6 +1,6 @@
 # jekyll-theme-image-grid
 
-A simple responsive image grid theme for displaying image-based content with various built-in customization options. See a [live example](https://www.jzhong.today/jekyll-theme-image-grid/).
+A simple responsive image grid theme for displaying image-based content with various built-in customization options. See a [live example](http://www.jzhong.today/image-grid-example/).
 
 ![Example Screenshot](screenshot.png)
 
@@ -129,3 +129,7 @@ For complete customization, add css to the `_sass/style.scss` file.
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+## Links
+- [Live example site](http://www.jzhong.today/image-grid-example/)
+- [Example site repository](https://github.com/jirrian/image-grid-example)
+- In-depth installation tutorial (coming soon)
