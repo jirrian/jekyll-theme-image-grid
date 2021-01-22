@@ -149,7 +149,8 @@ Customize the layout HTML, includes HTML, and sass files, by copying the theme f
 - `_sass` - folder of scss files
 	- `style.scss` - styles for theme
 
-## Built in customization
+### Built in customization
+
 The following variables can be edited in the `_sass/style.scss` file to change colors of the website's design.
 ```sass
 $body-bg-color: white;		/* background color */
@@ -164,3 +165,9 @@ $page-title-color: gray;	/* color of page titles */
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Future updates
+
+- lazy loading
+- video post support
+- text post support
