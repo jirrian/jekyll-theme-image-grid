@@ -4,6 +4,12 @@ A simple responsive image grid theme for displaying image-based content with var
 
 ![Example Screenshot](screenshot.png)
 
+## Dependencies
+
+This theme uses the jekyll plugin [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag).
+
+This theme also uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/). Edit the files `_includes/bootstrap-scripts.html` and `_includes/bootstrap-style.html` to change the Bootstrap version.
+
 ## Installation
 
 [Create a new Jekyll site.](https://jekyllrb.com/docs/#instructions)
@@ -29,41 +35,22 @@ Then build your site:
 
 Preview your new site at `http://localhost:4000`. Now you should be able to test your site locally as well as deploy it on Github Pages.
 
-## Adding a New Post
+## Usage
+### First time setup
 
-Posts in this theme are image based. A post must have at least one corresponding image for it to show on the home grid page.
+Copy the contents of the [sample `_config.yml` file](https://github.com/jirrian/image-grid-example/blob/main/_config.yml) into your `_config.yml` file and edit the values with your information and preferred settings.
 
-All post markdown files are stored in the `_posts` folder.
-All images are stored in folders in the `_images` folder. Post images are stored in folders `_images/yyyy-mm-dd-name-of-post` that correspond to the name of the post `yyyy-mm-dd-name-of-post.md`. For example, if your post markdown file is named `2020-12-26-hello-world.md`, it must be in the `_posts` folder. And, all images that are displayed in that post must be in a folder `2020-12-26-hello-world` that is inside the `_images` folder.
+Delete the contents of the `_posts` folder.
 
-Post markdown files can contain the following:
-```
----
-layout: post
-title: Title of Post (optional)
-show_title: true (optional)
----
+Create a folder named `_images` in the root of your site directory. Make sure the `_images` folder is included in `_config.yml`.
 
-Post content here. (optional)
-```
+See an example site structure [here](https://github.com/jirrian/image-grid-example).
 
-## Adding a Page
+### Display Settings
 
-Pages are linked in the top nav bar. Markdown files for pages are stored in the root of the repository. Page markdown files can contain the following:
-```
----
-layout: page
-title: About
----
+Edit settings in the `_config.yml` file to change display settings for the grid and post pages. See the [sample `_config.yml` file](https://github.com/jirrian/image-grid-example/blob/main/_config.yml) for reference.
 
-Add your about me here. (optional)
-```
-
-## Display Settings
-
-Edit settings in the `_config.yml` file to change display settings for the grid and post pages.
-
-### Grid Page Display Settings
+#### Grid Page Display Settings
 
 Choose whether to show all images from posts on home grid page or only show the first image from posts by editing the following field.
 ```yaml
@@ -82,7 +69,7 @@ square-cropped - Images are displayed in square grid and cropped to a square asp
 square-og - Images are displayed in square grid and with original aspect ratios.   
 masonry - Images are displayed in original aspect ratios but staggered (like Pinterest). Please note this will display the images in top to bottom (then left to right) order instead of left to right (then top to bottom).
 
-### Post Page Display Settings
+#### Post Page Display Settings
 
 Change settings for what information is displayed on post pages.
 
@@ -110,20 +97,65 @@ post_settings:
 true - Displays date of post.   
 false - Does not show date of post.
 
-## Built-in Style Customization
+### Adding a New Post
 
-The following variables can be edited in the `_sass/style.scss` file to change colors of the website's design.
-```sass
-$body-bg-color: white;	// background color
-$header-title-color: blue;	// color of title of website
-$header-bg-color: white;	// color of nav bar
-$footer-color: silver;	// color of footer icons
-$post-title-color: gray;	// color of post titles
-$post-date-color: darkgray;	// color of post dates
-$page-title-color: gray; // color of page titles 
+Posts in this theme are image based. A post must have at least one corresponding image for it to show on the home grid page.
+
+All post markdown files are stored in the `_posts` folder.
+All images are stored in folders in the `_images` folder. Post images are stored in folders `_images/yyyy-mm-dd-name-of-post` that correspond to the name of the post `yyyy-mm-dd-name-of-post.md`. For example, if your post markdown file is named `2020-12-26-hello-world.md`, it must be in the `_posts` folder. And, all images that are displayed in that post must be in a folder `2020-12-26-hello-world` that is inside the `_images` folder.
+
+Post markdown files can contain the following:
+```
+---
+layout: post
+title: Title of Post (optional)
+show_title: true (optional)
+---
+
+Post content here. (optional)
 ```
 
-For complete customization, add css to the `_sass/style.scss` file.
+### Adding a Page
+
+Pages are linked in the top nav bar. Markdown files for pages are stored in the root of the repository. Page markdown files can contain the following:
+```
+---
+layout: page
+title: About
+---
+
+Add your about me here. (optional)
+```
+
+## Customization
+Customize the layout HTML, includes HTML, and sass files, by copying the theme files to your site directory and making edits to it there.
+
+### Theme files structure
+- `_layouts` - folder of layouts
+	- `default.html` - default layout
+	- `home.html` - grid page layout
+	- `page.html` - page layout
+	- `post.html` - post layout
+- `_includes` - folder of html code used in other layouts
+	- `bootstrap-scripts.html` - Bootstrap 4 scripts (edit to change version of Bootstrap)
+	- `bootstrap-style.html` - Bootstrap 4 stylesheet (edit to change version of Bootstrap)
+	- `footer.html` - footer
+	- `head.html` - head tag
+	- `header.html` - navigation bar
+- `_sass` - folder of scss files
+	- `style.scss` - styles for theme
+
+## Built in customization
+The following variables can be edited in the `_sass/style.scss` file to change colors of the website's design.
+```sass
+$body-bg-color: white;		/* background color */
+$header-title-color: blue;	/* color of title of website */
+$header-bg-color: white;	/* color of nav bar */
+$footer-color: silver;		/* color of footer icons */
+$post-title-color: gray;	/* color of post titles */
+$post-date-color: darkgray;	/* color of post dates */
+$page-title-color: gray;	/* color of page titles */
+```
 
 ## License
 
@@ -132,4 +164,4 @@ The theme is available as open source under the terms of the [MIT License](https
 ## Links
 - [Live example site](http://www.jzhong.today/image-grid-example/)
 - [Example site repository](https://github.com/jirrian/image-grid-example)
-- In-depth installation tutorial (coming soon)
+- [In-depth installation tutorial](https://pages.virtualgoodsdealer.com/articles/2021/01/21/simple-website-tutorial-part-three/)
