@@ -1,6 +1,10 @@
 # jekyll-theme-image-grid
 
-A simple responsive image grid theme for displaying image-based content with various built-in customization options. See a [live example](http://www.jzhong.today/image-grid-example/).
+A simple responsive image grid theme for displaying image-based content with various built-in customization options.
+
+- [Live example site](http://www.jzhong.today/image-grid-example/)
+- [Example site repository](https://github.com/jirrian/image-grid-example)
+- [In-depth installation tutorial](https://pages.virtualgoodsdealer.com/articles/2021/01/21/simple-website-tutorial-part-three/)
 
 ![Example Screenshot](screenshot.png)
 
@@ -44,7 +48,7 @@ Delete the contents of the `_posts` folder.
 
 Create a folder named `_images` in the root of your site directory. Make sure the `_images` folder is included in `_config.yml`.
 
-See an example site structure [here](https://github.com/jirrian/image-grid-example).
+Check out the [example site repo](https://github.com/jirrian/image-grid-example) for reference.
 
 ### Display Settings
 
@@ -160,8 +164,3 @@ $page-title-color: gray;	/* color of page titles */
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Links
-- [Live example site](http://www.jzhong.today/image-grid-example/)
-- [Example site repository](https://github.com/jirrian/image-grid-example)
-- [In-depth installation tutorial](https://pages.virtualgoodsdealer.com/articles/2021/01/21/simple-website-tutorial-part-three/)
