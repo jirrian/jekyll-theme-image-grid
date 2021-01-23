@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-image-grid"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["jirrian"]
   spec.email         = ["jillianzhong@yahoo.com"]
 
