@@ -16,12 +16,14 @@ This theme also uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-sta
 
 ## Installation
 
+### Github Pages remote theme method
+
 [Create a new Jekyll site.](https://jekyllrb.com/docs/#instructions)
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-image-grid"
+gem "github-pages", group: :jekyll_plugins
 ```
 And then execute:
 
@@ -38,6 +40,31 @@ Then build your site:
     $ bundle exec jekyll serve
 
 Preview your new site at `http://localhost:4000`. Now you should be able to test your site locally as well as deploy it on Github Pages.
+
+### Ruby gem installation method
+
+[Create a new Jekyll site.](https://jekyllrb.com/docs/#instructions)
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "jekyll-theme-image-grid"
+```
+And then execute:
+
+    $ bundle install
+
+Add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: jekyll-theme-image-grid
+```
+
+Then build your site:
+
+    $ bundle exec jekyll serve
+
+Preview your new site at `http://localhost:4000`. Now you should be able to test your site locally.
 
 ## Usage
 ### First time setup
